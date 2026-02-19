@@ -1,0 +1,268 @@
+
+        :root {
+            --gold: #D4AF37;
+            --bg: #FAF9F6;
+            --text: #2D2D2D;
+            --nude: #E9DCC9;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        html { 
+            scroll-behavior: smooth; 
+        }
+        body { 
+            background-color: var(--bg); 
+            color: var(--text); 
+            overflow-x: hidden; 
+        }
+
+        /* --- NAVEGAÇÃO --- */
+
+        header {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 249, 246, 0.98);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--nude);
+        }
+
+        .logo { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.8rem; 
+            font-weight: 600; 
+            letter-spacing: 2px; 
+        }
+        .logo span { 
+            color: var(--gold); 
+            font-style: italic; 
+        }
+
+        .nav-links { 
+            display: flex; 
+            gap: 30px; 
+            list-style: none; 
+            align-items: center; 
+        }
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--text); 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            transition: 0.3s; 
+        }
+
+        .nav-links a:hover { 
+            color: var(--gold); 
+        }
+
+        .hamburger { 
+            display: none; 
+            cursor: pointer; 
+            font-size: 1.5rem; 
+            color: var(--gold); 
+        }
+
+        /* --- HERO --- */
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
+                        url('https://plus.unsplash.com/premium_photo-1718626724867-970453587837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D') center/cover;
+            padding: 0 5%;
+        }
+
+        .hero-content h1 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: clamp(2.5rem, 6vw, 4rem); 
+            font-weight: 400; 
+            line-height: 1.1; 
+            margin-bottom: 25px; 
+        }
+        .hero-content p { 
+            font-size: 0.9rem; 
+            letter-spacing: 4px; 
+            text-transform: uppercase; 
+            margin-bottom: 35px; 
+            color: var(--text); 
+        }
+        
+        .btn-gold { 
+            padding: 18px 45px; 
+            background: var(--gold); 
+            color: white; 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            font-size: 0.75rem; 
+            letter-spacing: 2px;
+            transition: 0.4s;
+            display: inline-block;
+        }
+        .btn-gold:hover { 
+            background: #b8962d; 
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3); 
+        }
+
+          /* --- SERVIÇOS --- */
+
+        .services { 
+            padding: 100px 5%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        .service-card { 
+            padding: 50px; 
+            border: 1px solid var(--nude); 
+            text-align: center; 
+            transition: 0.3s; 
+        }
+        .service-card:hover { 
+            background: var(--white); 
+            border-color: var(--gold); 
+        }
+        .service-card h3 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.8rem; 
+            margin-bottom: 20px; 
+            color: var(--gold); 
+        }
+        .service-card p { 
+            font-size: 0.9rem; 
+            color: #777; 
+        }
+
+        .btn-preco {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ebc658;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+         .btn-preco:hover{
+            background-color:var(--gold);
+         }
+        
+       /*GALERIA */
+       .galeria-section h2 {
+           font-family: 'Cormorant Garamond',  serif; 
+           font-size: clamp(2.5rem, 6vw,     4rem); 
+            font-weight: 400; 
+            line-height: 1.1; 
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--gold);
+         
+       }
+        .galeria-grid  { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(28-px,1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .item-foto img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+        }
+        
+        /* --- AGENDA --- */
+
+        .secao-agenda { 
+             
+            border-radius: 30px; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            padding: 40px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05); 
+            
+        }
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        .form-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 600; 
+            color: var(--gold); 
+        }
+        .form-group input, .form-group select { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #eee; 
+            border-radius: 10px; 
+        }
+
+    
+
+        /* --- WHATSAPP --- */
+
+        .whatsapp-fixed {
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px;
+            background: var(--white); 
+            color: var(--gold);
+            width: 65px;
+             height: 65px; 
+             border-radius: 50%;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            text-decoration: none; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            z-index: 1001; 
+            font-size: 1.6rem; 
+            border: 1px solid var(--nude);
+            transition: 0.3s;
+        }
+        .whatsapp-fixed:hover { 
+            transform: scale(1.1); 
+            background: var(--gold); 
+            color: white; 
+        }
+
+        /* --- MOBILE --- */
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; 
+                position: absolute; 
+                top: 75px; 
+                left: 0; 
+                width: 100%;
+                background: var(--bg); 
+                flex-direction: column; 
+                padding: 50px; 
+                border-bottom: 1px solid var(--nude);
+            }
+
+            .nav-links.active { display: flex; }
+            .hamburger { display: block; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
