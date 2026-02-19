@@ -107,48 +107,22 @@
         </div>
     </footer>
 
-    <script>
-        // Menu Responsivo
-        const btnMenu = document.getElementById('btn-menu');
-        const navLinks = document.querySelector('.nav-links');
+      <script>
+    // MENU RESPONSIVO
+    const btnMenu = document.getElementById('btn-menu');
+    const navLinks = document.querySelector('.nav-links');
 
-        btnMenu.onclick = () => navLinks.classList.toggle('active');
+    btnMenu.onclick = () => navLinks.classList.toggle('active');
 
-        // Fechar menu ao clicar em links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.onclick = () => navLinks.classList.remove('active');
-        });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.onclick = () => navLinks.classList.remove('active');
+    });
 
-
-        // Lógica da Agenda
-   
-        let periodoEscolhido = "";
-
-        function setPeriodo(p, el) {
-            periodoEscolhido = p;
-            document.querySelectorAll('.btn-periodo').forEach(b => b.classList.remove('active'));
-            el.classList.add('active');
-        }
-
-        function enviarAgendamento() {
-            const numero = "5588997816898"; // SUBSTITUA PELO SEU NÚMERO
-            const serv = document.getElementById('servico-select').value;
-            const dataRaw = document.getElementById('data-select').value;
-
-            if(!dataRaw || !periodoEscolhido) {
-                alert("Por favor, escolha o dia e o período desejado!");
-                return;
-            }
-
-            const dataFormatada = dataRaw.split('-').reverse().join('/');
-            const mensagem =` Olá! Vi o site e gostaria de agendar:\n\n🌸 *Serviço:* ${serv}\n📅 *Data:* ${dataFormatada}\n⏰ *Turno:* ${periodoEscolhido}\n\nEstá disponível?`;
-
-            window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, '_blank');
-        }
-
-        // Bloquear datas passadas no calendário
-        document.getElementById('data-select').min = new Date().toISOString().split("T")[0];
+    // BLOQUEAR DATAS PASSADAS
+    const campoData = document.getElementById('data');
+    campoData.min = new
     </script>
 </body>
 
 </html>
+
